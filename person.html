@@ -1,0 +1,128 @@
+<html ng-app="nameApp">
+   <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="css.css" rel="stylesheet" type="text/css">
+     </head>
+   <body>
+        <div class="cover" id="nameCover">
+            <div class="navbar">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand">que</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active">
+                                <a href="#">Name</a>
+                            </li>
+                            <li class="">
+                                <a href="#">Info</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact<br></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="background-image-fixed cover-image" style="background-image : url('https://unsplash.imgix.net/photo-1422222948315-28aadb7a2cb8?w=1024&amp;q=50&amp;fm=jpg&amp;s=cfeadbd7a991e58b553bee29a7eeca55')"></div>
+            <div class="container" ng-controller="nameCtl as nameController">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h1>Enter Your Name</h1>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <form role="form">
+                                            <div class="form-group">
+                                                <label class="control-label" for="firstNameInput">First Name</label>
+                                                <input class="form-control" ng-model="nameCtl.first" id="firstNameInput" placeholder="Bob" type="text">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <form role="form">
+                                            <div class="form-group">
+                                                <label class="control-label" for="middleNameInput">Middle Name</label>
+                                                <input class="form-control" ng-model="nameCtl.middle" id="middleNameInput" placeholder="Sam" type="text">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <form role="form">
+                                            <div class="form-group">
+                                                <label class="control-label" for="lastNameInput">Last Name</label>
+                                                <input class="form-control" ng-model="nameCtl.last" id="lastNameInput" placeholder="Smith" type="text">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <form role="form">
+                                            <div class="form-group has-feedback">
+                                                <label class="control-label" for="nameSuffixInput">Suffix</label>
+                                                <input class="form-control" ng-model="nameCtl.suffix" id="nameSuffixInput" placeholder="Jr." type="text">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <form role="form">
+                            <div class="col-md-11">
+                                <div class="form-group">
+                                    <input class="form-control" id="exampleInputEmail1" type="text" value="{{ nameCtl.first + ' ' + nameCtl.middle + ' ' + nameCtl.last + ' ' + nameCtl.suffix }}">
+                                    <p class="help-block">Edit complete name, if necessary.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <a class="btn btn-lg btn-primary">Next<i class="fa fa-fw fa-arrow-right"></i></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cover" id="infoCover">
+            <div class="background-image-fixed cover-image" style=""></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>More About You</h1><div class="row"><div class="col-md-7"><form class="form-horizontal" role="form"><div class="form-group"><div class="col-sm-2"><label for="inputEmail3" class="control-label">Date of Birth</label></div><div class="col-sm-10"><input type="text" class="form-control" id="inputEmail3" placeholder="January 1, 1921"></div></div></form></div><div class="col-md-3"><div class="btn-toolbar" role="toolbar"><div class="btn-group"></div><div class="btn-group"><a type="button" class="btn btn-default">Male</a><a type="button" class="btn btn-default">Female</a></div><div class="btn-group"><a type="button" class="btn btn-default">Married</a></div></div></div><div class="col-md-2"><a class="btn btn-lg btn-primary">Next<i class="fa fa-fw fa-arrow-right"></i></a></div></div>
+                        <form role="form">
+                            <div class="col-md-1">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cover" id="contactCover">
+            <div class="background-image-fixed cover-image" style=""></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Contact Information</h1><form role="form"><div class="form-group col-md-12"><label class="control-label" for="exampleInputEmail1">Email address</label><input class="form-control" id="exampleInputEmail1" placeholder="email@address.com" type="email"></div><div class="form-group col-md-12"><label class="control-label" for="exampleInputPassword1">Address</label><input class="form-control" id="exampleInputPassword1" placeholder="123 Main St." type="text"></div><div class="form-group col-md-12"><input class="form-control" type="text" placeholder="Suite C"></div><div class="form-group col-md-6"><label class="control-label">City</label><input class="form-control" type="text" placeholder="Springfield"></div><div class="form-group col-md-2"><label class="control-label">State</label><select class="form-control"><option>1</option><option>2</option></select></div><div class="form-group col-md-4"><label class="control-label">Zip Code</label><input class="form-control" type="text" placeholder="90210"></div></form><div class="col-md-2 pull-right"><a class="btn btn-lg btn-primary">Next<i class="fa fa-fw fa-arrow-right"></i></a></div>
+                        <form role="form">
+                            <div class="col-md-1">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body></html>
